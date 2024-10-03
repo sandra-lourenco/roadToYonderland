@@ -2,11 +2,21 @@
 
 describe("Registered user should be able to login", () => {
   beforeEach(() => {
-    cy.visit("https://www.cotswoldoutdoor.com/");
+    cy.visit("/");
   });
 
-  it("Inserting the correct data the user should be able to login", () => {
+  it("From the search results, select a product.", () => {
     cy.login();
+    
+  });
+
+    it("Add the product to the shopping cart", () => {
+    cy.login();
+    
+  });
+
+  it("Verify that the product appears in the cart.", () => {
+    
     
   });
 });

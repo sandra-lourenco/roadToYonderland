@@ -9,7 +9,7 @@ module.exports = defineConfig({
       allureWriter(on, config);
       return config;
     },
-    baseUrl: "https://www.cotswoldoutdoor-com.ecomm-dev.yonderland.com/",
+    baseUrl: "https://www.cotswoldoutdoor.com/",
     specPattern: ["cypress/e2e/**/*.cy.{js,jsx,ts,tsx}"],
     supportFile: "cypress/support/e2e.js",
     excludeSpecPattern: ["*.js", "*.md"],
@@ -18,8 +18,8 @@ module.exports = defineConfig({
     numTestsKeptInMemory: 0,
     responseTimeout: 50000,
     pageLoadTimeout: 100000,
-    viewportHeight: 720,
-    viewportWidth: 1280,
+    viewportHeight: 1080,
+    viewportWidth: 1920,
     includeShadowDom: true,
   },
   env: {

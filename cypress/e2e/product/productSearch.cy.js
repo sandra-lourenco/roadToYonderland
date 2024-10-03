@@ -5,8 +5,22 @@ describe("Registered user should be able to login", () => {
     cy.visit("https://www.cotswoldoutdoor.com/");
   });
 
-  it("Inserting the correct data the user should be able to login", () => {
+  it("Log in as a registered user", () => {
     cy.login();
     
   });
+
+
+it("Search for a product using the search bar", () => {
+    
+    
+  });
+
+it("Verify that the search results match the query", () => {
+    
+    
+  });
 });
+
+
+
