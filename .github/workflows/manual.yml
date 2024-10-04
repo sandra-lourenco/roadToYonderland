@@ -20,15 +20,18 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 20
+
+      - name: Permission to run
+        run: chmod +x .github/scripts/run-e2e.sh
 
       - name: run-e2e
         run: |
-          ./.github/scripts/run-e2e.sh ${{ github.event.inputs.argument }}
+          ./.github/scripts/run-e2e.sh 
 
       - name: persist-artifacts
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: report-and-resources
           path: |
