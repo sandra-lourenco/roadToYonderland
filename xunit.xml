@@ -1,5 +1,0 @@
-<testsuite name="Mocha Tests" tests="3" failures="0" errors="0" skipped="0" timestamp="Fri, 04 Oct 2024 13:13:17 GMT" time="41.989">
-<testcase classname="Registration in cotswoldoutdoor website" name="Navigate to the registration page" time="11.16"/>
-<testcase classname="Registration in cotswoldoutdoor website" name="Fill out the registration form with valid data." time="12.582"/>
-<testcase classname="Registration in cotswoldoutdoor website" name="Submit the form and verify successful registration" time="17.782"/>
-</testsuite>
