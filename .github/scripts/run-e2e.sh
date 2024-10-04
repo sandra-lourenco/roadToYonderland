@@ -11,7 +11,7 @@ usage(){
 
 	cat >&2 <<-EOF
 	${argument} argument
-    example: $(basename "$0") e2e_dev
+    example: $(basename "$0") e2e_test
 	EOF
 	exit 1
 }
