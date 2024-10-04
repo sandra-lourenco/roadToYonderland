@@ -1,13 +1,10 @@
 
 const { defineConfig } = require("cypress");
 
-const allureWriter = require("@shelex/cypress-allure-plugin/writer");
-
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
-      allureWriter(on, config);
-      return config;
+    
     },
     baseUrl: "https://www.cotswoldoutdoor.com/",
     specPattern: ["cypress/e2e/**/*.cy.{js,jsx,ts,tsx}"],
@@ -22,8 +19,8 @@ module.exports = defineConfig({
     viewportWidth: 1920,
     includeShadowDom: true,
   },
-  env: {
-    allure: true,
-    allureResultsPath: "cypress/reports/allure-results",
-  },
+    reporter:"cypress-multi-reporters",
+    reporterOptions:{
+    configFile:"reporter-config.json"
+  }
 });

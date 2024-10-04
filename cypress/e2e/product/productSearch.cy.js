@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("Registered user should be able to login", () => {
+describe("Registered user should be able search for products", () => {
   beforeEach(() => {
     cy.visit("/");
     cy.wait(3000);

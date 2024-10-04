@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("Registered user should be able to login", () => {
+describe("Registered user should be able add products to the cart", () => {
   beforeEach(() => {
     cy.visit("/");
     cy.wait(3000);
@@ -17,14 +17,19 @@ describe("Registered user should be able to login", () => {
   it.only("Add the product to the shopping cart", () => {
     cy.login();
     cy.productSearchSelect();
+    //select size
     cy.get('[data-qa="size-select-buttons"] > :nth-child(2)').click();
+    //add to cart 
     cy.get(
       ".as-a-btn.as-a-btn--fill.as-a-btn--branded-alt.as-a-btn--l"
     ).click();
-    cy.get(
-      ".as-m-popover--modal-csr > .as-m-popover__content--modal > .as-m-popover-header > .as-m-popover-header__title"
+    //check if confirmation is visible
+    cy.get("//div[normalize-space()='Added to basket']"
     ).should("be.visible")
-    cy.get(".as-m-group > .as-t-box > .as-a-btn > .as-a-btn__text").click();
+    //go to basket
+    cy.get(
+      "a[class='as-a-btn as-a-btn--branded-alt'] span[class='as-a-btn__text']"
+    ).click();
     //cy.get(".as-m-popover-overlay").click()
     //cy.get(".dmpg-basket-hover").click()
     cy.wait(3000)
