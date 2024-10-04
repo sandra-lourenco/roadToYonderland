@@ -2,6 +2,11 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  reporter: 'cypress-multi-reporters',
+  reporterOptions: {
+    configFile: 'reporter-config.json',
+  },
+
   e2e: {
     setupNodeEvents(on, config) {
     
@@ -19,8 +24,4 @@ module.exports = defineConfig({
     viewportWidth: 1920,
     includeShadowDom: true,
   },
-    reporter:"cypress-multi-reporters",
-    reporterOptions:{
-    configFile:"reporter-config.json"
-  }
 });
