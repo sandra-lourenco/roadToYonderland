@@ -4,7 +4,7 @@
   "description": "Technical Challenge for QA position at Yonderland",
   "main": "cypress.config.js",
   "scripts": {
-    
+    "test": "npx cypress run"
   },
   "author": "Sandra Lourenço",
   "license": "ISC",
