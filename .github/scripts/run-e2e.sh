@@ -25,7 +25,7 @@ main() {
     fi
     mkdir config
     npm install
-    npx pcypress install
+    npx cypress install
     npm run $cmd
 }
 
