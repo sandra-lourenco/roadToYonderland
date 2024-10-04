@@ -4,3 +4,4 @@ export { fillRegistrationForm } from "./pages/fillRegistrationForm";
 export { goToLoginPage } from "./pages/goToLoginPage";
 export { productSearch } from "./pages/productSearch";
 export { productSearchSelect } from "./pages/productSearchSelect";
+export { addProductToCart } from "./pages/addProductToCart";

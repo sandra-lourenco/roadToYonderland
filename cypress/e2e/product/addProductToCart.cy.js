@@ -18,11 +18,13 @@ describe("Registered user should be able add products to the cart", () => {
     cy.login();
     cy.productSearchSelect();
     //select size
-    cy.get('[data-qa="size-select-buttons"] > :nth-child(2)').click();
+    cy.wait(2000);
+    cy.get('[data-qa="size-select-buttons"] > :nth-child(1)').click();
     //add to cart 
     cy.get(
       ".as-a-btn.as-a-btn--fill.as-a-btn--branded-alt.as-a-btn--l"
     ).click();
+    cy.wait(2000)
     //check if confirmation is visible
     cy.get("//div[normalize-space()='Added to basket']"
     ).should("be.visible")
@@ -39,5 +41,10 @@ describe("Registered user should be able add products to the cart", () => {
 
   });
 
-  it("Verify that the product appears in the cart.", () => {});
+  it("Verify that the product appears in the cart.", () => {
+    cy.login();
+    cy.productSearchSelect();
+    //cy.addProductToCart()
+    //check product cart page
+  });
 });
