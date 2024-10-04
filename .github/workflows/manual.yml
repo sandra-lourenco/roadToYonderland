@@ -27,7 +27,7 @@ jobs:
 
       - name: run-e2e
         run: |
-          ./.github/scripts/run-e2e.sh e2e_test
+          ./.github/scripts/run-e2e.sh test
 
       - name: persist-artifacts
         if: always()
