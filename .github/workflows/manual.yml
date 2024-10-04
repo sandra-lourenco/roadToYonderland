@@ -8,6 +8,8 @@ on:
         default: 'test'
         required: true
         type: choice
+        options:
+        - test
 
 jobs:
   
