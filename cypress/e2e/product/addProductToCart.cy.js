@@ -2,7 +2,9 @@
 
 describe("Registered user should be able add products to the cart", () => {
   beforeEach(() => {
-    cy.visit("/");
+    cy.visit(
+      "https://www.cotswoldoutdoor.com/p/quiksilver-mens-cold-snap-shacket-B12BCB0236.html?colour=124/"
+    );
     cy.wait(3000);
   });
 
@@ -31,15 +33,22 @@ describe("Registered user should be able add products to the cart", () => {
   it.only("Verify that the product appears in the cart.", () => {
     cy.addProductToCart();
     //go to basket
+    cy.wait(2000);
+    cy.get('body').type("{enter}")
     cy.get(
       "a[class='as-a-btn as-a-btn--branded-alt'] span[class='as-a-btn__text']"
     ).click();
     //confirm cart page
     cy.url().should("include", "/basket-overview");
+    cy.wait(2000)
     cy.get('[data-qa="product_quantity_input"]').should("be.visible");
-    //cy.get("[class='as-a-heading as-a-heading--title']").should("include","Your shopping basket");
+  
     //remove product from basket
     cy.wait(3000);
-    cy.get("[data-qa='remove_product']").click();
+    cy.get('[data-qa="product_quantity_minus"] > .as-a-btn__icon').click()
+     cy.wait(3000);
+    //cy.get("[data-qa='remove_product']").click();
+    cy.get('[data-qa="empty_basket_message"]').should("be.visible")
+
   });
 });

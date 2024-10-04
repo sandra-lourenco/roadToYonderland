@@ -1,5 +1,4 @@
 Cypress.Commands.add("addProductToCart", () => {
-  cy.login();
   cy.productSearchSelect();
   cy.wait(2000);
   cy.get('[data-qa="size-select-buttons"] > :nth-child(1)').click();

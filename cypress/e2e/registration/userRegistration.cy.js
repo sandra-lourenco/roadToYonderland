@@ -7,16 +7,11 @@ describe("Registration in cotswoldoutdoor website", () => {
   });
 
   it("Navigate to the registration page", () => {
-    cy.get(
-      '[class="as-m-popover__content--modal"] #accept-all-cookies'
-    ).click();
+    cy.get('[class="as-m-popover__content--modal"] #accept-all-cookies').click();
 
     cy.get("#auth-popup-button").click();
     cy.get('[data-qa="login_popover"]').should("be.visible");
-    cy.get(".no-gutter > .as-a-text > strong").should(
-      "have.text",
-      "Not a member? "
-    );
+    cy.get(".no-gutter > .as-a-text > strong").should("have.text","Not a member? ");
     cy.get('[data-qa="register_link"]').should("have.text", "Join now").click();
 
     cy.url().should("include", "/registration-page");
@@ -27,30 +22,15 @@ describe("Registration in cotswoldoutdoor website", () => {
 
     const email = `bart_test${Math.floor(Math.random() * 1e3)}@gmail.com`;
 
-    cy.get('[placeholder="Email address"]').should(
-      "have.attr",
-      "placeholder",
-      "Email address"
-    );
+    cy.get('[placeholder="Email address"]').should("have.attr","placeholder","Email address");
     cy.get("[id='email']").type(email);
     cy.get("body").click();
-    cy.get('[class="as-t-box margin-bottom-mobile-2"]')
-      .find("button")
-      .contains("Ignore")
-      .click();
+    cy.get('[class="as-t-box margin-bottom-mobile-2"]').find("button").contains("Ignore").click();
 
-    cy.get('[placeholder="Password"]').should(
-      "have.attr",
-      "placeholder",
-      "Password"
-    );
+    cy.get('[placeholder="Password"]').should("have.attr","placeholder","Password");
     cy.get("[id='password']").type("Password123!");
 
-    cy.get('[placeholder="Password"]').should(
-      "have.attr",
-      "placeholder",
-      "Password"
-    );
+    cy.get('[placeholder="Password"]').should("have.attr","placeholder","Password");
     cy.get("[id='passwordConfirmation']").type("Password123!");
 
     cy.get("select[name='title']").select("Mr");
@@ -58,9 +38,7 @@ describe("Registration in cotswoldoutdoor website", () => {
     cy.get("#firstName").type("Bart");
     cy.get("#lastName").type("Simpson");
 
-    cy.get("div[class='as-a-text as-a-text--s']").contains(
-      "is completely secure"
-    );
+    cy.get("div[class='as-a-text as-a-text--s']").contains("is completely secure");
   });
 
   it("Submit the form and verify successful registration", () => {
@@ -71,8 +49,6 @@ describe("Registration in cotswoldoutdoor website", () => {
     cy.contains("WE'RE SO HAPPY YOU'RE HERE.");
     cy.get("[title='Update Account Preferences']").click();
     cy.url().should("include", "/preferences");
-    cy.get(
-      ".as-m-account-menu > :nth-child(2) > .as-a-btn > .as-a-btn__text"
-    ).should("exist");
+    cy.get(".as-m-account-menu > :nth-child(2) > .as-a-btn > .as-a-btn__text").should("exist");
   });
 });
