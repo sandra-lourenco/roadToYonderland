@@ -24,7 +24,7 @@ jobs:
 
       - name: run-e2e
         run: |
-          ./.github/scripts/run-e2e.sh ${{ github.event.inputs.argument | 'test'}}
+          ./.github/scripts/run-e2e.sh ${{ github.event.inputs.argument }}
 
       - name: persist-artifacts
         if: always()
