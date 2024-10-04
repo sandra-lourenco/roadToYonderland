@@ -1,4 +1,9 @@
 Cypress.Commands.add("addProductToCart", () => {
+  cy.login();
   cy.productSearchSelect();
-  //complete
+  cy.wait(2000);
+  cy.get('[data-qa="size-select-buttons"] > :nth-child(1)').click();
+  //add to cart
+  cy.get(".as-a-btn.as-a-btn--fill.as-a-btn--branded-alt.as-a-btn--l").click();
+  cy.wait(2000);
 });

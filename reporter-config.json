@@ -1,8 +1,0 @@
-{
-    "reporter":"spec",
-    "mochaMultiReporterOptions":{
-        "spec":{
-            "output":"cypress/reports/mocha-report.txt"
-        }
-    }
-}
