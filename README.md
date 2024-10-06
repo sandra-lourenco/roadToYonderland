@@ -102,6 +102,6 @@ In the GitHub Actions tab of the repository, you can view the results of the tes
 
 Example:
 
-![GitHub Actions Report Example](/cypress/images/gitHubActionsReport.png)
+![GitHub Actions Report](cypress/images/gitHubActionsReport.png)
 
 
