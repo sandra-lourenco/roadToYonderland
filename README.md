@@ -1,7 +1,7 @@
 
-# Cypress End-to-End Testing
+# End-to-End Testing Exercise
 
-This repository contains automated end-to-end (E2E) tests for various user flows such as login, product search, adding a product to the cart, and user registration using [Cypress](https://www.cypress.io/).
+This repository contains automated end-to-end (E2E) tests for various user flows such as login, product search, adding a product to the cart, and user registration using Cypress for https://www.cotswoldoutdoor.com/
 
 ## Project Structure
 
@@ -16,7 +16,7 @@ cypress/
 │   │   └── productSearch.cy.js     # Product search test
 │   └── registration/
 │       └── userRegistration.cy.js  # New user registration test
-├── fixtures/                       # Contains test data (fixtures)
+├── images  /                       # Contains images
 ├── plugins/                        # Cypress plugin configurations
 ├── report/                         # Contains test reports
 ├── screenshots/                    # Test failure screenshots
