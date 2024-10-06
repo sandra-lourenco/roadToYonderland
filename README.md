@@ -87,8 +87,12 @@ npx cypress run --spec "cypress/e2e/login/userLogin.cy.js"
 This repository includes a CI configuration to run the Cypress tests in GitHub Actions. The configuration file is located at:
 
 ```plaintext
-.github/workflows/test.yml
+.github/workflows/e2e.yml
 ```
+
+To run the tests, in GitHub, under the roadToYonderland repository, go to actions tab and run the workflow:
+
+![Actions](cypress/images/actions.jpg)
 
 ## Viewing Test Results
 
