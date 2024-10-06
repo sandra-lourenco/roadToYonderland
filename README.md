@@ -100,4 +100,7 @@ This repository includes a CI configuration to run the Cypress tests in GitHub A
 
 In the GitHub Actions tab of the repository, you can view the results of the tests directly from the CI pipeline.
 
+Example:
+
+![GitHub Actions Report Example](./images/gitHubActionsReport.png)
 
