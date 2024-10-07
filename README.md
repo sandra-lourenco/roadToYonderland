@@ -82,6 +82,15 @@ You can specify individual test files by adding the `--spec` option:
 npx cypress run --spec "cypress/e2e/login/userLogin.cy.js"
 ```
 
+If you need to run a specific test, you can add .only to the test and run the command:
+
+![only](cypress/images/only.jpg)
+
+
+```bash
+npx cypress run
+```
+
 ## Running Tests in GitHub Actions
 
 This repository includes a CI configuration to run the Cypress tests in GitHub Actions. The configuration file is located at:
@@ -107,5 +116,9 @@ In the GitHub Actions tab of the repository, you can view the results of the tes
 Example:
 
 ![GitHub Actions Report](cypress/images/gitHubActionsReport.jpg)
+
+You can also see the Mochawesome report. you just need to go to the artifact part in the run:
+
+
 
 
