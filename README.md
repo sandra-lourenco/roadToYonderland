@@ -110,7 +110,7 @@ To run the tests, in GitHub, under the roadToYonderland repository, go to action
 - Test results (including screenshots) will be saved in the `cypress/screenshots/` directory.
 - A Mochawesome report is generated in the `cypress/reports/mochawesome-report/` directory. A .html file is generated:
 
-
+![report](cypress/images/mochawesome.jpg)
 
 ### GitHub Actions Reports
 
