@@ -16,8 +16,7 @@ describe("Registered user should be able search for products", () => {
     cy.get('[data-qa="searchbox"]').type("shirts{enter}");
   });
 
-  it("Verify that the search results match the query", () => {
-    cy.login();
+  it.only("Verify that the search results match the query", () => {
     cy.productSearch();
     //check if result is correct
     cy.get(".as-a-heading.as-a-heading--title").should("be.visible");

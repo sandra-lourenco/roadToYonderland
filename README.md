@@ -76,13 +76,6 @@ This will run all the tests in the terminal without opening the GUI (headless mo
 npm run test
 ```
 
-To generate a full report:
-
-```bash
-npm run merge-reports
-npm run generate-report
-```
-
 You can specify individual test files by adding the route to the file:
 
 ```bash
@@ -91,7 +84,7 @@ npx cypress run "cypress/e2e/login/userLogin.cy.js"
 
 If you need to run a specific test, you can add .only to the test and run the command:
 
-![only](cypress/images/only.jpg)
+![only tag](cypress/images/only.jpg)
 
 
 ## Running Tests in GitHub Actions
@@ -111,9 +104,17 @@ To run the tests, in GitHub, under the roadToYonderland repository, go to action
 ### Test Reports
 
 - Test screenshots of failling testes will be saved in the `cypress/screenshots/` directory.
+
+To generate a full report:
+
+```bash
+npm run merge-reports
+npm run generate-report
+```
+
 - A Mochawesome report is generated in the `cypress/reports/` directory.
 
-![report](cypress/images/mochawesome.jpg)
+![Full Report](cypress/images/fullReport.jpg)
 
 ### GitHub Actions Reports
 
