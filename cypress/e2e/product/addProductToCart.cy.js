@@ -30,7 +30,7 @@ describe("Registered user should be able add products to the cart", () => {
     ).should("contain", "Added");
   });
 
-  it.only("Verify that the product appears in the cart.", () => {
+  it("Verify that the product appears in the cart.", () => {
     cy.addProductToCart();
     //go to basket
     cy.wait(2000);

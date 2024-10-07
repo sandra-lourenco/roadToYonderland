@@ -107,7 +107,10 @@ To run the tests, in GitHub, under the roadToYonderland repository, go to action
 
 ### Test Reports
 
-- Test results (including screenshots and videos of failures) will be saved in the `cypress/screenshots/` directories.
+- Test results (including screenshots) will be saved in the `cypress/screenshots/` directory.
+- A Mochawesome report is generated in the `cypress/reports/mochawesome-report/` directory. A .html file is generated:
+
+
 
 ### GitHub Actions Reports
 
@@ -116,8 +119,6 @@ In the GitHub Actions tab of the repository, you can view the results of the tes
 Example:
 
 ![GitHub Actions Report](cypress/images/gitHubActionsReport.jpg)
-
-You can also see the Mochawesome report. you just need to go to the artifact part in the run:
 
 
 
