@@ -98,7 +98,7 @@ To run the tests, in GitHub, under the roadToYonderland repository, go to action
 
 ### Test Reports
 
-- Test results (including screenshots and videos of failures) will be saved in the `cypress/screenshots/` and `cypress/videos/` directories.
+- Test results (including screenshots and videos of failures) will be saved in the `cypress/screenshots/` directories.
 
 ### GitHub Actions Reports
 
