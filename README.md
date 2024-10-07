@@ -18,7 +18,7 @@ cypress/
 │       └── userRegistration.cy.js  # New user registration test
 ├── images  /                       # Contains images
 ├── plugins/                        # Cypress plugin configurations
-├── report/                         # Contains test reports
+├── reports/                        # Contains mochawesome test reports
 ├── screenshots/                    # Test failure screenshots
 ├── support/                        # Additional support for tests (custom commands)
 │   ├── pages/
@@ -87,10 +87,6 @@ If you need to run a specific test, you can add .only to the test and run the co
 ![only](cypress/images/only.jpg)
 
 
-```bash
-npx cypress run
-```
-
 ## Running Tests in GitHub Actions
 
 This repository includes a CI configuration to run the Cypress tests in GitHub Actions. The configuration file is located at:
@@ -107,8 +103,8 @@ To run the tests, in GitHub, under the roadToYonderland repository, go to action
 
 ### Test Reports
 
-- Test results (including screenshots) will be saved in the `cypress/screenshots/` directory.
-- A Mochawesome report is generated in the `cypress/reports/mochawesome-report/` directory. A .html file is generated:
+- Test screenshots of failling testes will be saved in the `cypress/screenshots/` directory.
+- A Mochawesome report is generated in the `cypress/reports/` directory. A .html file is generated:
 
 ![report](cypress/images/mochawesome.jpg)
 
