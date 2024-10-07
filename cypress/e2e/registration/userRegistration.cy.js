@@ -7,6 +7,7 @@ describe("Registration in cotswoldoutdoor website", () => {
   });
 
   it("Navigate to the registration page", () => {
+    //accept cookies
     cy.get('[class="as-m-popover__content--modal"] #accept-all-cookies').click();
 
     cy.get("#auth-popup-button").click();
@@ -21,7 +22,7 @@ describe("Registration in cotswoldoutdoor website", () => {
     cy.goToRegistrationPage();
 
     const email = `bart_test${Math.floor(Math.random() * 1e3)}@gmail.com`;
-
+    // fill form
     cy.get('[placeholder="Email address"]').should("have.attr","placeholder","Email address");
     cy.get("[id='email']").type(email);
     cy.get("body").click();

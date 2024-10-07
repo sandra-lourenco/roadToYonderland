@@ -73,13 +73,20 @@ npx cypress open
 This will run all the tests in the terminal without opening the GUI (headless mode).
 
 ```bash
-npx cypress run
+npm run test
 ```
 
-You can specify individual test files by adding the `--spec` option:
+To generate a full report:
 
 ```bash
-npx cypress run --spec "cypress/e2e/login/userLogin.cy.js"
+npm run merge-reports
+npm run generate-report
+```
+
+You can specify individual test files by adding the route to the file:
+
+```bash
+npx cypress run "cypress/e2e/login/userLogin.cy.js"
 ```
 
 If you need to run a specific test, you can add .only to the test and run the command:
@@ -104,7 +111,7 @@ To run the tests, in GitHub, under the roadToYonderland repository, go to action
 ### Test Reports
 
 - Test screenshots of failling testes will be saved in the `cypress/screenshots/` directory.
-- A Mochawesome report is generated in the `cypress/reports/` directory. A .html file is generated:
+- A Mochawesome report is generated in the `cypress/reports/` directory.
 
 ![report](cypress/images/mochawesome.jpg)
 
