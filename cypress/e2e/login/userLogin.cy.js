@@ -14,8 +14,10 @@ describe("Registered user should be able to login", () => {
 
   it("Log in with a registered user credentials", () => {
     cy.goToLoginPage();
-    cy.get("[id='email']").type("sandralourenc@yahoo.com");
-    cy.get("[id='Password']").type("QAtest2024");
+    cy.fixture("user").then((user) => {
+     cy.get("[id='email']").type(user.email);
+     cy.get("[id='Password']").type(user.password);
+   });
     cy.get("button[class='as-a-btn as-a-btn--fill']").click();
   });
 

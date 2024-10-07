@@ -26,13 +26,16 @@ jobs:
         run: npm install
 
       - name: Run Cypress tests
-        run: npx cypress run --reporter mochawesome
+        run: npx cypress run --reporter mochawesome --reporter-options overwrite=false,reportDir=cypress/report,reportFilename=index
+        env:
+          CYPRESS_email: ${{ secrets.EMAIL }}
+          CYPRESS_password: ${{ secrets.PASSWORD }}
 
       - name: Upload Mochawesome Report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v2
         with:
           name: mochawesome-report
-          path: cypress/reports/mochawesome-report/
+          path: cypress/reports/mochawesome-report/*.html
 
   
 
