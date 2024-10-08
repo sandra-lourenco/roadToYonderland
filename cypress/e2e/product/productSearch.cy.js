@@ -1,26 +1,22 @@
 /// <reference types="cypress" />
+import ProductPage from "../../support/pages/productPage";
 
-describe("Registered user should be able search for products", () => {
+describe("Product Search and Selection on cotswoldoutdoor website", () => {
   beforeEach(() => {
     cy.visit("/");
     cy.wait(3000);
   });
 
-  it("Log in as a registered user", () => {
-    cy.login();
-  });
-
   it("Search for a product using the search bar", () => {
     cy.login();
-    cy.get('[data-qa="searchbox"]').click();
-    cy.get('[data-qa="searchbox"]').type("shirts{enter}");
+    const productName = "shirts";
+    ProductPage.searchProduct(productName);
   });
 
   it("Verify that the search results match the query", () => {
-    cy.productSearch();
-    //check if result is correct
-    cy.get(".as-a-heading.as-a-heading--title").should("be.visible");
-    cy.url().should("include", "/shirts");
-    cy.get(".as-m-breadcrumb__list > :nth-child(4) > .as-a-text").should.exist;
+    cy.login();
+    const productName = "shirts";
+    ProductPage.searchProduct(productName);
+    ProductPage.validateSearch();
   });
 });
