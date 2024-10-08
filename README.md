@@ -22,15 +22,12 @@ cypress/
 ├── screenshots/                    # Test failure screenshots
 ├── support/                        # Additional support for tests (custom commands)
 │   ├── pages/
-│   │   ├── addProductToCart.js     # Page object for adding product to cart
-│   │   ├── fillRegistrationForm.js # Page object for filling the registration form
-│   │   ├── goToLoginPage.js        # Page object for navigating to the login page
-│   │   ├── goToRegistrationPage.js # Page object for navigating to the registration page
-│   │   ├── login.js                # Page object for login actions
-│   │   ├── productSearch.js        # Page object for searching products
-│   │   ├── productSearchSelect.js  # Page object for selecting a product after search
-│   │   ├── commands.js             # Custom Cypress commands
-│   │   └── e2e.js                  # End-to-end test initialization
+│   │   ├── productPage.js          # Page object for product page
+│   │   ├── cartPage.js             # Page object for product basket
+│   │   ├── registrationPage.js     # Page object for registration page
+│   │   ├── loginPage.js            # Page object for login actions
+│   |── commands.js                 # Custom Cypress commands
+│   │── e2e.js                      # End-to-end test initialization
 ├── node_modules/                   # Node.js dependencies
 ├── .gitignore                      # Git ignore file
 ├── cypress.config.js               # Cypress configuration file
